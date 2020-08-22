@@ -35,11 +35,11 @@ graphBoxes.forEach((graphbox) => {
 //console.dir(graphBoxes)
 
 // Exemple de forEach
-const ducks = ["Audrey", "Bob", "Coco"]
-ducks.forEach((duck) => { console.log(duck) });
+//const ducks = ["Audrey", "Bob", "Coco"]
+//ducks.forEach((duck) => { console.log(duck) });
 
 
-const url = "https://api.github.com/users/joz84/repos";
+const url = "https://api.github.com/users/ChloeRonteix/repos";
 
 Highcharts.getJSON(url,
   function (data) {
@@ -64,13 +64,13 @@ Highcharts.getJSON(url,
   Highcharts.chart('graph1', {
   
     title: {
-      text: 'Nombre de repo github de Jo'
+      text: 'Nombre de repo github de Chloe'
     },
   
     xAxis: {
       type: 'datetime',
       accessibility: {
-        rangeDescription: 'Range: Jul 1st 2009 to Jul 31st 2009.'
+        rangeDescription: 'Range: Oct 1st 2019 to Dec 31st 2021.'
       }
     },
   
@@ -83,11 +83,11 @@ Highcharts.getJSON(url,
     tooltip: {
       crosshairs: true,
       shared: true,
-      valueSuffix: '°C'
+      valueSuffix: 'lignes'
     },
   
     series: [{
-      name: 'Temperature',
+      name: 'Repositories',
       data: firstFormatedData,
       zIndex: 1,
       marker: {
