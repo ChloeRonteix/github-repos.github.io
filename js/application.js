@@ -17,11 +17,18 @@ const sizeByDate = (data) => {
   return data.map( current => [Date.parse(current.created_at), current.size]).sort();
 };
 
-const graphBoxes = document.querySelectorAll("div.graph-box")
+const graphBoxes = [...document.querySelectorAll("div.graph-box")]
 graphBoxes.forEach((graphbox) => {
+  const button_click = graphbox.querySelector("div.border-bottom")
+  button_click.onclick = (e) => {
+    element = graphbox.querySelector("div.graph")
+    element.classList.toggle('d-none')
+    //console.dir(element);
+    //console.log("coucou j'ai cliqué");
+  };
   //console.dir(graphbox.querySelectorAll("div.graph"));
-  element = graphbox.querySelectorAll("div.graph");
-  console.dir(element);
+  ;
+  
   //element.addEventListener("click", () => {
     //console.dir("clicked element")})
   });
