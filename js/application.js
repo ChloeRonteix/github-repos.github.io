@@ -23,6 +23,13 @@ graphBoxes.forEach((graphbox) => {
   button_click.onclick = (e) => {
     element = graphbox.querySelector("div.graph")
     element.classList.toggle('d-none')
+    
+    //Correction Claudine
+    //const graph = graphbox.querySelector(".graph")
+    //graphBox.addEventListener("click", (event) => {
+      //graph.classList.toggle("d-none");
+      //})
+
     //console.dir(element);
     //console.log("coucou j'ai cliqué");
   };
